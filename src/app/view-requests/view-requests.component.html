@@ -1,0 +1,64 @@
+<h3>View Requests Page</h3>
+
+<form (submit)="View()">
+  <div class="row">
+    <div class="col-md-1">
+      <label>Site</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="text" name="site" [(ngModel)]="site">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <label>Date</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="date" name="date" [(ngModel)]="date">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <input class="submit-design" type="submit">
+    </div>
+  </div>
+</form>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource.length > 0" style="width: 100%; margin-top: 40px;">
+
+  <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef> Distributed </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (click)="SelectRequest(row)" [checked]="row.distributed" [disabled]="row.distributed">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+  <!-- Position Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="site">
+    <th mat-header-cell *matHeaderCellDef> Site </th>
+    <td mat-cell *matCellDef="let element"> {{element.site}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef> Quantity </th>
+    <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef> Distributor </th>
+    <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

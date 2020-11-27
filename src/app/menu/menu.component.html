@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngIf="type == 'dist'" (click)="Select('request')">Request</button>
+  <button mat-menu-item *ngIf="type == 'dist'" (click)="Select('view')">View Allocated Quantities</button>
+  <button mat-menu-item *ngIf="type == 'admin'" (click)="Select('add')">Add distributor</button>
+  <button mat-menu-item *ngIf="type == 'admin'" (click)="Select('site')">Add Site</button>
+  <button mat-menu-item *ngIf="type == 'admin'" (click)="Select('viewrequests')">View all requests</button>
+  <button mat-menu-item *ngIf="type == 'admin'" (click)="Select('summary')">Summary</button>
+  <button mat-menu-item (click)="LogOut()">Log Out</button>
+</mat-menu>

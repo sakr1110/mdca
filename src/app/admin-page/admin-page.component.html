@@ -1,0 +1,6 @@
+
+<app-menu [type]="'admin'" (selected_link)="Select($event)" style="float: left;"></app-menu>
+<app-add *ngIf="show_add" style="float: left;width: 85%;margin: 0 0 0 40px;"></app-add>
+<app-add-warehouse *ngIf="show_add_site" style="float: left;width: 85%;margin: 0 0 0 40px;"></app-add-warehouse>
+<app-summary *ngIf="show_summary" style="float: left;width: 85%;margin: 0 0 0 40px;"></app-summary>
+<app-view-requests *ngIf="view_requests" style="float: left;width: 85%;margin: 0 0 0 40px;"></app-view-requests>

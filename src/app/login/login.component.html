@@ -1,0 +1,24 @@
+<h3>Login Page</h3>
+<form (submit)="Login()">
+  <div class="row">
+    <div class="col-md-1">
+      <label>UserName</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="text" placeholder="UserName" name="username" [(ngModel)]="username">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <label>Password</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="password" placeholder="Password" name="password" [(ngModel)]="password">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <input class="submit-design" type="submit">
+    </div>
+  </div>
+</form>

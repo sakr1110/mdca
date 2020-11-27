@@ -1,0 +1,32 @@
+<h3>Add Distributor Page</h3>
+<form (submit)="Add()">
+  <div class="row">
+    <div class="col-md-1">
+      <label>UserName</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="text" name="username" placeholder="UserName" [(ngModel)]="username">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <label>Password</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="text" name="password" placeholder="Password" [(ngModel)]="password">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <label>Site</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="text" placeholder="Site" name="site" [(ngModel)]="site">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <input class="submit-design" type="submit">
+    </div>
+  </div>
+</form>

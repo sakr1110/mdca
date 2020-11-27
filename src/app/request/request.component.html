@@ -1,0 +1,24 @@
+<h3>Request Page</h3>
+<form (submit)="Request()">
+  <div class="row">
+    <div class="col-md-1">
+      <label>Quantity</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="number" name="qty" [(ngModel)]="quantity">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <label>Date</label>
+    </div>
+    <div class="col-md-4">
+      <input class="input-design" type="date" name="date" [(ngModel)]="date">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <input class="submit-design" type="submit">
+    </div>
+  </div>
+</form>
